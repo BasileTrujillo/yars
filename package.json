@@ -1,0 +1,51 @@
+{
+  "name": "yars",
+  "version": "1.0.0",
+  "description": "Yet Another React Store",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=text-summary mocha --colors --recursive",
+    "test-report": "nyc --reporter=text-summary --reporter=html --reporter=cobertura --reporter=lcov mocha --colors --recursive",
+    "lint": "eslint bin routes test app.js",
+    "security-check": "nsp check",
+    "static-analysis": "plato -d artifacts/plato -r -t yars -e .eslintrc.json index.js lib",
+    "check-version": "git-npm-version-checker -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BasileTrujillo/yars.git"
+  },
+  "keywords": [
+    "react",
+    "js",
+    "store",
+    "oop",
+    "es6",
+    "no-flux"
+  ],
+  "author": "[L0gIn] Basile Trujillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BasileTrujillo/yars/issues"
+  },
+  "homepage": "https://github.com/BasileTrujillo/yars",
+  "dependencies": {
+    "lodash.has": "^4.5.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.4.1",
+    "eslint-config-exaprint": "^0.2.6",
+    "git-npm-version-checker": "^1.1.0",
+    "ink-docstrap": "^1.3.0",
+    "jsdoc": "^3.5.4",
+    "mocha": "^3.5.0",
+    "nsp": "^2.7.0",
+    "nyc": "^11.1.0",
+    "plato": "^1.7.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

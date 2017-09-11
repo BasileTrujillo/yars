@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "exaprint",
+    "exaprint/rules/node",
+    "exaprint/rules/es6"
+  ],
+  "rules": {
+    "no-console": "off"
+  }
+}
