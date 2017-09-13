@@ -1,6 +1,6 @@
 {
   "name": "yars",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet Another React Store",
   "main": "index.js",
   "scripts": {
@@ -34,13 +34,13 @@
   },
   "homepage": "https://github.com/BasileTrujillo/yars",
   "dependencies": {
-    "codeclimate-test-reporter": "^0.5.0",
     "lodash.has": "^4.5.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",
     "chai": "^4.1.1",
     "chai-as-promised": "^7.1.1",
+    "codeclimate-test-reporter": "^0.5.0",
     "eslint": "^4.4.1",
     "eslint-config-exaprint": "^0.2.6",
     "eslint-config-react": "^1.1.7",
