@@ -146,6 +146,10 @@ jobs:
       - *restore_workspace
 
       - run:
+          name: Build production bundle
+          command: yarn build
+
+      - run:
           name: Deploy package to NPM Registry
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
