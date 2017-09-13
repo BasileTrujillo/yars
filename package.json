@@ -1,8 +1,8 @@
 {
   "name": "yars",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Yet Another React Store",
-  "main": "dist/yars.js",
+  "main": "dist/yars.min.js",
   "scripts": {
     "test": "nyc --reporter=text-summary mocha --colors --recursive",
     "test-babel": "mocha --compilers js:babel-core/register --colors ./test/*.test.js",
