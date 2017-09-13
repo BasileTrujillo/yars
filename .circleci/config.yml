@@ -102,6 +102,10 @@ jobs:
           path: coverage
           destination: coverage
 
+      - run:
+          name: Publish code coverage
+          command: yarn publish-coverage
+
   code_lint:
     <<: *node_config
     steps:
