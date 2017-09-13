@@ -1,16 +1,18 @@
 {
   "name": "yars",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Yet Another React Store",
-  "main": "index.js",
+  "main": "dist/yars.js",
   "scripts": {
     "test": "nyc --reporter=text-summary mocha --colors --recursive",
+    "test-babel": "mocha --compilers js:babel-core/register --colors ./test/*.test.js",
     "test-report": "nyc --reporter=text-summary --reporter=html --reporter=cobertura --reporter=lcov mocha --colors --recursive",
     "publish-coverage": "codeclimate-test-reporter < coverage/lcov.info",
     "lint": "eslint index.js lib",
     "security-check": "nsp check",
     "static-analysis": "plato -d artifacts/plato -r -t yars -e .eslintrc.json index.js lib",
-    "check-version": "git-npm-version-checker -v"
+    "check-version": "git-npm-version-checker -v",
+    "build": "webpack --env build"
   },
   "engines": {
     "node": ">=8.5.0"
@@ -37,13 +39,21 @@
     "lodash.has": "^4.5.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.0",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.0.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
     "chai": "^4.1.1",
     "chai-as-promised": "^7.1.1",
     "codeclimate-test-reporter": "^0.5.0",
     "eslint": "^4.4.1",
     "eslint-config-exaprint": "^0.2.6",
     "eslint-config-react": "^1.1.7",
+    "eslint-loader": "1.7.1",
     "eslint-plugin-react": "^7.3.0",
     "git-npm-version-checker": "^1.1.0",
     "ink-docstrap": "^1.3.0",
@@ -51,7 +61,10 @@
     "mocha": "^3.5.0",
     "nsp": "^2.7.0",
     "nyc": "^11.1.0",
-    "plato": "^1.7.0"
+    "path": "^0.12.7",
+    "plato": "^1.7.0",
+    "webpack": "3.1.0",
+    "yargs": "7.1.0"
   },
   "directories": {
     "test": "test"
