@@ -32,7 +32,7 @@ filter_only_tags: &filter_only_tags
 # Define node build configurations
 node_config: &node_config
   docker:
-    - image: circleci/node:6.10
+    - image: circleci/node:8.5
   <<: *working_directory
   parallelism: 1
 

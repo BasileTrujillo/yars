@@ -12,6 +12,7 @@
     "static-analysis": "plato -d artifacts/plato -r -t yars -e .eslintrc.json index.js lib",
     "check-version": "git-npm-version-checker -v"
   },
+  "engines" : { "node" : ">=8.5.0" },
   "repository": {
     "type": "git",
     "url": "https://github.com/BasileTrujillo/yars.git"
