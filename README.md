@@ -53,14 +53,16 @@ import React, { Component } from 'react';
 import { myStore } from 'stores.js';
 
 class Footer extends Component {
-  constructor() {
-    super();
-
+  componentWillMount() {
     // Subscribe to all store data modifications
     // myStore.subscribe(this);
 
     // Subscribe to 'foo' store data modifications
     myStore.subscribe(this, ['foo']);
+  }
+
+  componentWillUnmount() {
+    myStore.unsubscribe(this);
   }
 
   render() {
@@ -146,10 +148,12 @@ import React, { Component } from 'react';
 import { userStore } from 'stores.js';
 
 class componentA extends Component {
-  constructor() {
-    super();
-
+  componentWillMount() {
     userStore.subscribe(this, ['username']);
+  }
+
+  componentWillUnmount() {
+    userStore.unsubscribe(this);
   }
   
   handleFetchUser() {

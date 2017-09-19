@@ -6,6 +6,7 @@
     "exaprint/rules/es6"
   ],
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "prefer-reflect": "off"
   }
 }
