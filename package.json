@@ -1,8 +1,8 @@
 {
   "name": "yars",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Yet Another React Store",
-  "main": "dist/yars.min.js",
+  "main": "dist/yars.js",
   "scripts": {
     "test": "nyc --reporter=text-summary mocha --colors --recursive",
     "test-babel": "mocha --compilers js:babel-core/register --colors ./test/*.test.js",
@@ -12,7 +12,8 @@
     "security-check": "nsp check",
     "static-analysis": "plato -d artifacts/plato -r -t yars -e .eslintrc.json index.js lib",
     "check-version": "git-npm-version-checker -v",
-    "build": "webpack --env build"
+    "build": "webpack",
+    "build-min": "webpack --env build"
   },
   "engines": {
     "node": ">=8.5.0"
