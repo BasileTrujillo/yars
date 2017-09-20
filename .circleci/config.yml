@@ -147,7 +147,7 @@ jobs:
 
       - run:
           name: Build production bundle
-          command: yarn build
+          command: yarn build && yarn build-min
 
       - run:
           name: Deploy package to NPM Registry
