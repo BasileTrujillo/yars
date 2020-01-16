@@ -4,6 +4,8 @@
 [![CircleCI](https://circleci.com/gh/BasileTrujillo/yars.svg?style=shield)](https://circleci.com/gh/BasileTrujillo/yars)
 [![Code Coverage](https://codeclimate.com/github/BasileTrujillo/yars/badges/coverage.svg)](https://codeclimate.com/github/BasileTrujillo/yars)
 
+***NOTE: This project was initially a troll to show to redux's fan boys that with some few lines of code it is possible to get a clean store without all the Redux verbosity. Now react store management can be done using the context API and react hooks.***
+
 This project is a lightfull and powerful No-Flux OOP way to share data between react components.
 
 No Actions, no Dipatcher, no Reducer, no Functionnal development, just a simple class representing a store with data, getters/setters and every related function to fetch and/or modify your data store.
