@@ -59,7 +59,7 @@
     "git-npm-version-checker": "^1.1.0",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.4",
-    "mocha": "^3.5.0",
+    "mocha": "^4.0.1",
     "nsp": "^2.7.0",
     "nyc": "^11.1.0",
     "path": "^0.12.7",
